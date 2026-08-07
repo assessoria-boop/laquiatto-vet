@@ -1,0 +1,78 @@
+LAQUIATTO VETERINARIA - Landing Page
+====================================
+
+JA ESTA NA PASTA (a pagina ja abre funcionando)
+----------------------------------------------
+index.html            -> a pagina completa
+logo.webp             -> menu, hero (acima da headline) e favicon
+1.webp a 5.webp       -> prints reais das avaliacoes do Google (carrossel)
+
+Os arquivos logo.webp e 1..5.webp foram copiados da pasta da Laquiatto Pet
+Store (mesma logo e mesmo perfil do Google). Se quiser prints diferentes,
+so substituir os arquivos 1.webp ... 5.webp mantendo os mesmos nomes.
+
+
+AINDA FALTA (a pagina funciona sem, mas fica melhor com)
+--------------------------------------------------------
+
+1) FOTOS DA CLINICA (galeria que troca sozinha com fade)
+     clinica1.webp
+     clinica2.webp
+     clinica3.webp
+     clinica4.webp
+
+   Formato ideal: horizontal, proporcao 4:3 (ex.: 1200 x 900 px).
+   As fotos NAO ficam esticadas: a moldura mantem a proporcao 4:3 e a
+   imagem preenche o espaco sem deformar.
+   Se voce nao colocar nenhuma foto, a galeria some sozinha e o texto
+   ocupa a largura toda (nao fica buraco na pagina).
+
+   Quer mais ou menos fotos? Basta adicionar/remover as linhas
+   <img src="clinicaX.webp" ...> dentro de <div class="clinica-galeria">.
+
+2) ID DO MICROSOFT CLARITY
+   Abra o index.html, procure por CLARITY_ID (logo no inicio do arquivo) e
+   cole o ID do projeto entre as aspas. Exemplo:
+       var CLARITY_ID = "abc123xyz";
+   Enquanto estiver vazio, o Clarity simplesmente nao carrega (nao da erro).
+
+3) HORARIO DE FUNCIONAMENTO
+   Hoje a caixa de "Funcionamento" diz para falar pelo WhatsApp. Se quiser o
+   horario real, procure por "Funcionamento" no index.html e troque o texto.
+
+
+COMO CONVERTER IMAGENS PARA WEBP
+--------------------------------
+https://squoosh.app (gratuito, no navegador):
+abra a imagem > escolha WebP > qualidade 75-80 > baixe > renomeie.
+
+
+JA CONFIGURADO NA PAGINA
+------------------------
+- WhatsApp: +55 11 96452-3795 (o numero NAO aparece escrito, so nos botoes)
+- Mensagem automatica: "Ola encontrei voces pelo Google, gostaria de atendimento."
+- Texto de todos os botoes: "Atendimento Imediato"
+- Botao do cabecalho: "Entre em contato"
+- Cabecalho: "Atendimento Disponivel Agora" (Agora em negrito)
+- Sem botao de ligacao em nenhum lugar
+- Google Tag Manager: GTM-5FG65KK9 (carregamento adiado, nao trava a pagina)
+- Microsoft Clarity: instalado, falta so o ID (ver item 2 acima)
+- Mapa do Google: Av. Senador Vergueiro, 3170 - Rudge Ramos - SBC
+- Cores tiradas da logo: roxo #9333EA e amarelo #F2ED5C
+- Botoes de WhatsApp sempre no verde oficial #25D366
+- Fontes do sistema (zero download de fonte = carregamento mais rapido)
+- Todas as imagens em .webp
+- Zoom e arrasto lateral bloqueados no celular
+- Hero preenche a primeira dobra inteira, com a logo acima da headline
+- "Resposta em 2 minutos" com raio logo abaixo do botao do hero
+- Depoimentos logo abaixo dos numeros (stats)
+- Titulos e subtitulos centralizados no celular
+- No celular o nome da clinica fica oculto no cabecalho
+- A logo nao e clicavel
+- Secao de localizacao com a frase "Localizacao Privilegiada"
+
+
+COMO VER A PAGINA
+-----------------
+E so dar dois cliques no index.html que ele abre no navegador.
+Para testar no celular, use o modo responsivo do navegador (F12).

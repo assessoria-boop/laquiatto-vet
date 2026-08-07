@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Laquiatto Veterinária · Clínica Veterinária em São Bernardo do Campo</title>
+  <meta name="description" content="Laquiatto Veterinária, clínica veterinária em Rudge Ramos, São Bernardo do Campo/SP. Nota 4,9 com mais de 150 avaliações no Google. Consultas, vacinas, exames, cirurgias e acompanhamento completo para o seu pet." />
+  <meta name="theme-color" content="#9333EA" />
+  <link rel="icon" type="image/webp" href="logo.webp" />
+  <link rel="apple-touch-icon" href="logo.webp" />
+  <link rel="preload" as="image" href="logo.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <script>
+    /* GTM + Clarity carregados sob demanda (primeira interação ou 3,5s) para não travar o LCP */
+    var CLARITY_ID = "";  /* <<< cole aqui o ID do projeto no Microsoft Clarity, ex.: "abc123xyz" */
+
+    function _loadTags(){
+      if(window._tagsLoaded)return;window._tagsLoaded=1;
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5FG65KK9');
+      if(CLARITY_ID){
+        (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script",CLARITY_ID);
+      }
+    }
+    ['click','touchstart','scroll','keydown'].forEach(function(e){window.addEventListener(e,_loadTags,{once:true,passive:true});});
+    setTimeout(_loadTags,3500);
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --marca: #9333EA;            /* roxo da logo */
+      --marca-escuro: #4A1178;
+      --marca-claro: #B45CF5;
+      --amarelo: #F2ED5C;          /* amarelo do fundo da logo */
+      --amarelo-claro: #F7F48F;
+      --roxo-suave: #F7F0FE;
+      --creme: #FDFBFF;
+      --prata: #8B7A95;
+      --gradiente: linear-gradient(135deg, #4A1178 0%, #7722C4 55%, #A855F7 100%);
+      --verde-wpp: #25D366;
+      --verde-wpp-hover: #1DA851;
+      --texto: #1E1224;
+      --cinza: #6C6172;
+      --cinza-claro: #F5F2F7;
+      --borda: #E7DFEC;
+      --branco: #fff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+    }
+
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      overscroll-behavior-x: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      color: var(--texto);
+      background: var(--branco);
+      -webkit-font-smoothing: antialiased;
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    /* TOPO */
+    .topo {
+      background: var(--gradiente);
+      color: rgba(255,255,255,0.95);
+      text-align: center;
+      padding: 9px 20px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .topo strong { color: var(--amarelo); }
+
+    .topo-dot {
+      display: inline-block;
+      width: 7px; height: 7px;
+      background: #25D366;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0.4; }
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 48px;
+      border-bottom: 1px solid var(--borda);
+      background: var(--branco);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-logo-circulo {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+      background: var(--branco);
+    }
+
+    .nav-logo-circulo img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+    }
+
+    .nav-nome {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--marca);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-badge {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--branco);
+      background: var(--marca);
+      border-radius: 999px;
+      padding: 3px 10px;
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--verde-wpp);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 10px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+    .nav-btn:hover { background: var(--verde-wpp-hover); transform: translateY(-1px); }
+    .nav-btn svg { width: 16px; height: 16px; fill: white; flex-shrink: 0; }
+
+    /* HERO */
+    .hero {
+      min-height: calc(100svh - 104px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px 44px;
+      position: relative;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 0%, var(--roxo-suave) 0%, #ffffff 62%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 660px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-logo {
+      width: 148px; height: 148px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 34px;
+      box-shadow: 0 8px 32px rgba(74,17,120,0.22);
+      background: var(--branco);
+      padding: 4px;
+      flex-shrink: 0;
+    }
+
+    .hero-logo img {
+      width: 100%; height: 100%;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      font-weight: 900;
+      color: var(--texto);
+      letter-spacing: -1.5px;
+      line-height: 1.14;
+      margin-bottom: 18px;
+      margin-top: 4px;
+    }
+
+    .br-mob { display: none; }
+
+    .hero h1 .h1-destaque { color: var(--marca); }
+
+    .hero-rating {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--cinza);
+      margin-bottom: 34px;
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .btn-wpp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: var(--verde-wpp);
+      color: white;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      padding: 16px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      width: 100%;
+      transition: all 0.2s;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.40);
+    }
+    .btn-wpp:hover { background: var(--verde-wpp-hover); transform: translateY(-2px); }
+    .btn-wpp svg { width: 20px; height: 20px; fill: white; flex-shrink: 0; }
+
+    .hero-resposta {
+      font-size: 13px;
+      color: var(--cinza);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* STATS */
+    .stats {
+      background: var(--gradiente);
+      padding: 28px 48px;
+    }
+
+    .stats-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: stretch;
+    }
+
+    .stat {
+      text-align: center;
+      padding: 8px 16px;
+      border-right: 1px solid rgba(255,255,255,0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .stat:last-child { border-right: none; }
+    .stat-num   { font-size: 26px; font-weight: 900; color: var(--amarelo); letter-spacing: -1px; }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.82); margin-top: 4px; font-weight: 500; }
+
+    /* DEPOIMENTOS */
+    .sec-depoi {
+      background: white;
+      padding: 88px 0;
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .sec-depoi-inner { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+
+    .carrossel-wrap {
+      position: relative;
+      margin-top: 48px;
+      overflow: hidden;
+    }
+
+    .carrossel-track {
+      display: flex;
+      transition: transform 0.4s ease;
+      cursor: grab;
+      user-select: none;
+    }
+    .carrossel-track.dragging { cursor: grabbing; transition: none; }
+
+    .carrossel-slide {
+      flex: 0 0 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0 48px;
+    }
+
+    .review-img-card {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .review-img-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.13);
+      display: block;
+      pointer-events: none;
+    }
+
+    .carrossel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .carrossel-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: white;
+      border: 1.5px solid var(--borda);
+      color: var(--marca);
+      font-size: 18px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .carrossel-btn:hover { background: var(--roxo-suave); }
+
+    .carrossel-dots { display: flex; gap: 6px; }
+
+    .carrossel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #DCCFE6;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .carrossel-dot.ativo { background: var(--marca); }
+
+    .depoi-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .depoi-imagens { order: 1; width: 100%; }
+    .depoi-conteudo { order: 0; text-align: center; }
+    .depoi-imagens .carrossel-wrap { margin-top: 44px; }
+
+    .depoi-titulo { font-size: 34px; margin-bottom: 0; }
+
+    /* SEÇÕES GERAIS */
+    .sec {
+      padding: 88px 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sec-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--prata);
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      margin-bottom: 12px;
+    }
+
+    .sec-titulo {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .sec-titulo span { color: var(--marca); }
+
+    .sec-sub {
+      font-size: 15px;
+      color: var(--cinza);
+      line-height: 1.6;
+      max-width: 620px;
+      margin-bottom: 40px;
+    }
+
+    /* SERVIÇOS */
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .servico-card {
+      background: var(--cinza-claro);
+      border-radius: 20px;
+      padding: 26px 22px;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .servico-card:hover {
+      background: var(--roxo-suave);
+      border-color: #E8D6F4;
+      transform: translateY(-3px);
+    }
+
+    .servico-icone {
+      width: 44px; height: 44px;
+      background: var(--gradiente);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+
+    .servico-icone svg {
+      width: 22px; height: 22px;
+      stroke: var(--amarelo);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .servico-card h3 { font-size: 15px; font-weight: 700; line-height: 1.4; }
+    .servico-card p  { font-size: 13px; color: var(--cinza); margin-top: 6px; line-height: 1.5; }
+
+    .sec-btn-centro { display: flex; justify-content: center; margin-top: 36px; }
+    .sec-btn-centro .btn-wpp { max-width: 420px; }
+
+    /* POR QUE (galeria da clínica) */
+    .sec-porque {
+      padding: 88px 48px;
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .clinica-galeria {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 4 / 3;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(74,17,120,0.18);
+      background: var(--roxo-suave);
+      margin: 0 auto;
+    }
+    .clinica-galeria img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;      /* mantém a proporção original, sem esticar */
+      object-position: center;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+    }
+    .clinica-galeria img.ativo { opacity: 1; }
+
+    .motivos { display: flex; flex-direction: column; gap: 8px; }
+
+    .motivo {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 20px;
+      border-radius: 16px;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .motivo:hover { background: var(--roxo-suave); border-color: #E8D6F4; }
+
+    .motivo-num {
+      width: 36px; height: 36px;
+      border-radius: 10px;
+      background: var(--gradiente);
+      color: var(--amarelo);
+      font-size: 14px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .motivo h4 { font-size: 15px; font-weight: 700; margin-bottom: 4px; }
+    .motivo p  { font-size: 13px; color: var(--cinza); line-height: 1.5; }
+
+    /* CTA */
+    .sec-cta-wrap { background: var(--gradiente); }
+
+    .sec-cta {
+      padding: 88px 48px;
+      text-align: center;
+      max-width: 660px;
+      margin: 0 auto;
+    }
+
+    .sec-cta h2 {
+      font-size: 38px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    .sec-cta h2 span { color: var(--amarelo); }
+
+    .sec-cta-texto {
+      font-size: 15px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.82);
+      margin-bottom: 32px;
+    }
+
+    /* LOCALIZAÇÃO */
+    .sec-local { background: var(--cinza-claro); padding: 88px 48px; }
+
+    .sec-local-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .info-box {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border: 1px solid var(--borda);
+    }
+
+    .info-linha { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; color: var(--cinza); line-height: 1.5; }
+    .info-linha .ico { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+    .info-linha strong { color: var(--texto); display: block; }
+
+    .mapa { border-radius: 24px; overflow: hidden; height: 340px; box-shadow: 0 8px 32px rgba(0,0,0,0.1); }
+    .mapa iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--borda);
+      padding: 32px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--marca);
+      letter-spacing: -0.5px;
+    }
+
+    .footer-texto { font-size: 13px; color: var(--cinza); }
+    .footer-texto strong { color: var(--texto); }
+
+    /* FLUTUANTE */
+    .wpp-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 58px; height: 58px;
+      background: var(--verde-wpp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      text-decoration: none;
+      z-index: 999;
+      transition: all 0.2s;
+    }
+    .wpp-float:hover { transform: scale(1.1); }
+    .wpp-float svg { width: 28px; height: 28px; fill: white; }
+
+    /* RESPONSIVO */
+    @media (max-width: 900px) {
+      nav { padding: 12px 20px; }
+      nav .nav-nome, nav .nav-badge { display: none; }
+
+      .hero { min-height: calc(100svh - 96px); padding: 36px 14px 36px; }
+      /* headline fluida: cresce junto com a largura do aparelho sem nunca estourar */
+      .hero h1 { font-size: clamp(28px, 9.6vw, 40px); letter-spacing: -1.5px; margin-bottom: 16px; }
+      .hero-rating { font-size: 16px; margin-bottom: 30px; }
+      .br-mob { display: inline; }
+      .br-desk { display: none; }
+      .hero-logo { width: 120px; height: 120px; margin-bottom: 28px; }
+      .hero-btns { max-width: 100%; }
+
+      .stats { padding: 0 20px; }
+      .stats-inner { grid-template-columns: repeat(2, 1fr); }
+      .stat { padding: 20px 12px; border-right: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18); }
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(3) { grid-column: 1 / -1; border-right: none; border-bottom: none; }
+      .stat-num { font-size: 20px; }
+
+      .sec-depoi { padding: 56px 0; }
+      .sec-depoi-inner { padding: 0 20px; text-align: center; }
+      .carrossel-slide { padding: 0 16px; }
+      .review-img-card { max-width: 100%; }
+
+      .depoi-titulo { font-size: 26px; }
+      .depoi-imagens .carrossel-wrap { margin-top: 32px; }
+
+      .sec { padding: 56px 20px; text-align: center; }
+      .sec-titulo { font-size: 26px; }
+      .sec-sub { margin-left: auto; margin-right: auto; margin-bottom: 32px; }
+
+      .servicos-grid { grid-template-columns: 1fr; gap: 12px; }
+      .servico-card { text-align: center; }
+      .servico-icone { margin-left: auto; margin-right: auto; }
+
+      .sec-porque { grid-template-columns: 1fr; gap: 40px; padding: 56px 20px; text-align: center; }
+      .clinica-galeria { max-width: 420px; }
+      .motivos { align-items: center; }
+      .motivo { text-align: left; max-width: 440px; width: 100%; }
+
+      .sec-cta { padding: 56px 20px; }
+      .sec-cta h2 { font-size: 26px; }
+
+      .sec-local { padding: 56px 20px; }
+      .sec-local-inner { grid-template-columns: 1fr; gap: 32px; }
+      .sec-local-inner > div:first-child { text-align: center; }
+      .info-box { text-align: left; }
+      .mapa { height: 260px; }
+
+      footer { padding: 24px 20px; flex-direction: column; text-align: center; }
+
+      .wpp-float { width: 62px; height: 62px; bottom: 20px; right: 20px; }
+      .wpp-float svg { width: 30px; height: 30px; }
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FG65KK9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- TOPO -->
+<div class="topo">
+  <span class="topo-dot"></span>
+  Atendimento Disponível <strong>Agora</strong>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-circulo">
+      <img src="logo.webp" alt="Laquiatto Veterinária" loading="eager" decoding="async" width="42" height="42" />
+    </div>
+    <span class="nav-nome">Laquiatto Veterinária</span>
+    <span class="nav-badge">Clínica Veterinária</span>
+  </div>
+  <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="nav-btn" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Entre em contato
+  </a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-logo">
+      <img src="logo.webp" alt="Laquiatto Veterinária" decoding="async" loading="eager" width="148" height="148" />
+    </div>
+    <h1>
+      <span class="h1-destaque">Clínica Veterinária<br class="br-mob" /> em</span><br class="br-desk" /> São Bernardo<br class="br-mob" /> do Campo
+    </h1>
+    <p class="hero-rating">Cuidado completo para a saúde<br class="br-mob" /> do seu melhor amigo!</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Atendimento Imediato
+      </a>
+      <p class="hero-resposta">⚡ Resposta em 2 minutos</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat">
+      <div class="stat-num">4,9 ★</div>
+      <div class="stat-label">Nota média no Google</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">+150</div>
+      <div class="stat-label">Avaliações de tutores reais</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div>
+      <div class="stat-label">em Rudge Ramos, SBC</div>
+    </div>
+  </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<div class="sec-depoi">
+  <div class="sec-depoi-inner">
+   <div class="depoi-grid">
+    <div class="depoi-imagens">
+    <div class="carrossel-wrap">
+      <div class="carrossel-track" id="carrosselTrack">
+        <div class="carrossel-slide">
+          <div class="review-img-card">
+            <img src="1.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="review-img-card">
+            <img src="2.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="review-img-card">
+            <img src="3.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="review-img-card">
+            <img src="4.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
+          </div>
+        </div>
+        <div class="carrossel-slide">
+          <div class="review-img-card">
+            <img src="5.webp" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+      <div class="carrossel-nav">
+        <button class="carrossel-btn" onclick="moverCarrossel(-1)" aria-label="Anterior">&#8592;</button>
+        <div class="carrossel-dots">
+          <div class="carrossel-dot ativo" onclick="irParaSlide(0)"></div>
+          <div class="carrossel-dot" onclick="irParaSlide(1)"></div>
+          <div class="carrossel-dot" onclick="irParaSlide(2)"></div>
+          <div class="carrossel-dot" onclick="irParaSlide(3)"></div>
+          <div class="carrossel-dot" onclick="irParaSlide(4)"></div>
+        </div>
+        <button class="carrossel-btn" onclick="moverCarrossel(1)" aria-label="Próximo">&#8594;</button>
+      </div>
+    </div>
+    </div>
+
+    <div class="depoi-conteudo">
+      <span class="sec-tag">Depoimentos reais</span>
+      <h2 class="sec-titulo depoi-titulo">Quem confia <span>na<br class="br-mob" /> Laquiatto recomenda</span></h2>
+    </div>
+   </div>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<div class="sec">
+  <span class="sec-tag">O que fazemos</span>
+  <h2 class="sec-titulo">Do check-up de rotina ao tratamento completo, <span>seu pet tem para onde ir</span></h2>
+  <p class="sec-sub">Saúde de pet não espera a agenda ficar livre. Aquele apetite que sumiu, a vacina que venceu, o incômodo que ninguém explica: quando existe uma equipe de confiança pertinho de você, tudo fica mais simples. Na Laquiatto Veterinária, profissionais atenciosos e apaixonados cuidam do seu companheiro com competência, carinho e estrutura completa, em todas as fases da vida dele.</p>
+  <div class="servicos-grid">
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      </div>
+      <h3>Consultas com equipe qualificada</h3>
+      <p>Diagnóstico cuidadoso e orientação clara para o tratamento certo.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M18 2l4 4"/><path d="M17 7l-9 9-4 1 1-4 9-9z"/><path d="M13 5l6 6"/></svg>
+      </div>
+      <h3>Vacinas e vermifugação em dia</h3>
+      <p>Proteção contra doenças em cada fase da vida do seu pet.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 3 10 2.5-5H21"/></svg>
+      </div>
+      <h3>Exames e diagnóstico</h3>
+      <p>Resultados analisados com atenção para agir rápido e com segurança.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M5 3l7 7"/><path d="M9 7l-4 4 3 3 4-4"/><path d="M12 14l6 6a2 2 0 0 0 3-3l-6-6"/></svg>
+      </div>
+      <h3>Cirurgias com segurança</h3>
+      <p>Procedimentos realizados por uma equipe experiente e dedicada.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+      </div>
+      <h3>Check-up e acompanhamento</h3>
+      <p>Do filhote ao idoso, um olhar próximo que previne antes de tratar.</p>
+    </div>
+    <div class="servico-card">
+      <div class="servico-icone">
+        <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14"/><path d="M12 8.5v4M10 10.5h4"/><path d="M9.5 21v-4h5v4"/></svg>
+      </div>
+      <h3>Estrutura organizada e acolhedora</h3>
+      <p>Um ambiente pensado para o conforto do seu pet e a sua confiança.</p>
+    </div>
+  </div>
+  <div class="sec-btn-centro">
+    <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Atendimento Imediato
+    </a>
+  </div>
+</div>
+
+<!-- POR QUE -->
+<div style="background:var(--cinza-claro); padding: 1px 0;">
+  <div class="sec-porque">
+    <div class="clinica-galeria">
+      <img src="clinica1.webp" class="ativo" alt="Estrutura da Laquiatto Veterinária" loading="lazy" decoding="async" />
+      <img src="clinica2.webp" alt="Estrutura da Laquiatto Veterinária" loading="lazy" decoding="async" />
+      <img src="clinica3.webp" alt="Estrutura da Laquiatto Veterinária" loading="lazy" decoding="async" />
+      <img src="clinica4.webp" alt="Estrutura da Laquiatto Veterinária" loading="lazy" decoding="async" />
+    </div>
+    <div>
+      <span class="sec-tag">Por que escolher a Laquiatto Veterinária?</span>
+      <h2 class="sec-titulo" style="font-size:32px;">Cuidado de verdade,<br class="br-mob" /> <span>do começo ao fim.</span></h2>
+      <div class="motivos">
+        <div class="motivo">
+          <div class="motivo-num">01</div>
+          <div>
+            <h4>Equipe veterinária experiente</h4>
+            <p>Profissionais que explicam cada passo e tratam seu pet como se fosse deles.</p>
+          </div>
+        </div>
+        <div class="motivo">
+          <div class="motivo-num">02</div>
+          <div>
+            <h4>4,9 no Google, com mais de 150 avaliações</h4>
+            <p>Confiança comprovada por quem já foi atendido aqui.</p>
+          </div>
+        </div>
+        <div class="motivo">
+          <div class="motivo-num">03</div>
+          <div>
+            <h4>Atendimento humanizado</h4>
+            <p>Tutores destacam o carinho, a segurança e a atenção da equipe.</p>
+          </div>
+        </div>
+        <div class="motivo">
+          <div class="motivo-num">04</div>
+          <div>
+            <h4>Pertinho de você</h4>
+            <p>Av. Senador Vergueiro, 3170, Rudge Ramos, São Bernardo do Campo.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="sec-cta-wrap">
+  <div class="sec-cta">
+    <h2>A saúde do seu pet não espera. <span>E nós também não.</span></h2>
+    <p class="sec-cta-texto">Seja uma consulta de rotina, uma vacina atrasada ou aquele sinal que te deixou preocupado, a Laquiatto Veterinária está de portas abertas para atender com agilidade e cuidado. Fale agora e venha com tranquilidade.</p>
+    <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" style="max-width:420px;margin:0 auto;" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Atendimento Imediato
+    </a>
+  </div>
+</div>
+
+<!-- LOCALIZAÇÃO -->
+<div class="sec-local">
+  <div class="sec-local-inner">
+    <div>
+      <span class="sec-tag">Onde estamos</span>
+      <h2 class="sec-titulo" style="font-size:32px;"><span>Localização Privilegiada</span><br />em Rudge Ramos, São Bernardo do Campo/SP</h2>
+      <div class="info-box">
+        <div class="info-linha">
+          <span class="ico">📍</span>
+          <div>
+            <strong>Endereço</strong>
+            Av. Senador Vergueiro, 3170 · Rudge Ramos, São Bernardo do Campo/SP
+          </div>
+        </div>
+        <div class="info-linha">
+          <span class="ico">🕒</span>
+          <div>
+            <strong>Funcionamento</strong>
+            Fale com a equipe pelo WhatsApp e agende o melhor horário
+          </div>
+        </div>
+      </div>
+      <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="btn-wpp" style="margin-top:24px;font-size:15px;padding:14px 24px;max-width:300px;" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Atendimento Imediato
+      </a>
+    </div>
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.226684914036!2d-46.5602112!3d-23.6678501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce439a3aed7b3d%3A0x529f0f1ac512c52a!2sLaquiatto%20Pet%20Store%20-%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20Banho%20e%20Tosa%20%2C%20Cursos%20de%20Banho%20e%20Tosa%2C%20Vererinario%20%2C%20Ra%C3%A7%C3%B5es%20%2C%20Creche%20e%20Hotel.!5e0!3m2!1spt-BR!2sbr!4v1786125990552!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Localização Laquiatto Veterinária"></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">Laquiatto Veterinária</span>
+  <div class="footer-texto">
+    <strong>Laquiatto Veterinária · São Bernardo do Campo/SP</strong><br />
+    4,9 no Google. Cuidado de verdade para o seu pet. 🐾
+  </div>
+  <a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="nav-btn" rel="noopener">Atendimento Imediato</a>
+</footer>
+
+<!-- BOTÃO FLUTUANTE -->
+<a href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." class="wpp-float" title="WhatsApp" aria-label="Falar no WhatsApp" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  /* Carrossel de Depoimentos */
+  var slideAtual = 0;
+  var totalSlides = document.querySelectorAll('.carrossel-slide').length;
+
+  function atualizarCarrossel() {
+    var track = document.getElementById('carrosselTrack');
+    var slideW = track.querySelector('.carrossel-slide').offsetWidth;
+    track.style.transform = 'translateX(-' + (slideAtual * slideW) + 'px)';
+    document.querySelectorAll('.carrossel-dot').forEach(function(d, i) {
+      d.classList.toggle('ativo', i === slideAtual);
+    });
+  }
+
+  function moverCarrossel(dir) {
+    slideAtual = (slideAtual + dir + totalSlides) % totalSlides;
+    atualizarCarrossel();
+  }
+
+  function irParaSlide(i) {
+    slideAtual = i;
+    atualizarCarrossel();
+  }
+
+  var track = document.getElementById('carrosselTrack');
+
+  var touchStartX = 0;
+  track.addEventListener('touchstart', function(e) { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', function(e) {
+    var diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) moverCarrossel(diff > 0 ? 1 : -1);
+  });
+
+  var mouseStartX = 0, isDragging = false;
+  track.addEventListener('mousedown', function(e) { isDragging = true; mouseStartX = e.clientX; track.classList.add('dragging'); });
+  document.addEventListener('mouseup', function(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    track.classList.remove('dragging');
+    var diff = mouseStartX - e.clientX;
+    if (Math.abs(diff) > 40) moverCarrossel(diff > 0 ? 1 : -1);
+  });
+
+  setInterval(function() { moverCarrossel(1); }, 5000);
+  window.addEventListener('resize', atualizarCarrossel);
+
+  /* Galeria da clínica com fade (ignora imagens ainda não enviadas) */
+  var galeria = document.querySelector('.clinica-galeria');
+  var galeriaAtual = 0;
+
+  function iniciarGaleria() {
+    var imgs = galeria.querySelectorAll('img');
+    if (!imgs.length) {
+      galeria.style.display = 'none';
+      galeria.parentElement.style.gridTemplateColumns = '1fr';
+      return;
+    }
+    imgs[0].classList.add('ativo');
+    if (imgs.length < 2) return;
+    setInterval(function() {
+      imgs[galeriaAtual].classList.remove('ativo');
+      galeriaAtual = (galeriaAtual + 1) % imgs.length;
+      imgs[galeriaAtual].classList.add('ativo');
+    }, 4000);
+  }
+
+  var pendentes = galeria.querySelectorAll('img').length;
+  function checarGaleria() { if (--pendentes === 0) iniciarGaleria(); }
+
+  galeria.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('error', function() { img.remove(); checarGaleria(); });
+    if (img.complete && img.naturalWidth > 0) { checarGaleria(); }
+    else if (img.complete) { img.remove(); checarGaleria(); }
+    else { img.addEventListener('load', checarGaleria); }
+  });
+</script>
+</body>
+</html>
