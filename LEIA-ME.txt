@@ -30,13 +30,7 @@ AINDA FALTA (a pagina funciona sem, mas fica melhor com)
    Quer mais ou menos fotos? Basta adicionar/remover as linhas
    <img src="clinicaX.webp" ...> dentro de <div class="clinica-galeria">.
 
-2) ID DO MICROSOFT CLARITY
-   Abra o index.html, procure por CLARITY_ID (logo no inicio do arquivo) e
-   cole o ID do projeto entre as aspas. Exemplo:
-       var CLARITY_ID = "abc123xyz";
-   Enquanto estiver vazio, o Clarity simplesmente nao carrega (nao da erro).
-
-3) HORARIO DE FUNCIONAMENTO
+2) HORARIO DE FUNCIONAMENTO
    Hoje a caixa de "Funcionamento" diz para falar pelo WhatsApp. Se quiser o
    horario real, procure por "Funcionamento" no index.html e troque o texto.
 
@@ -56,7 +50,7 @@ JA CONFIGURADO NA PAGINA
 - Cabecalho: "Atendimento Disponivel Agora" (Agora em negrito)
 - Sem botao de ligacao em nenhum lugar
 - Google Tag Manager: GTM-5FG65KK9 (carregamento adiado, nao trava a pagina)
-- Microsoft Clarity: instalado, falta so o ID (ver item 2 acima)
+- Microsoft Clarity: instalado e ativo (ID xys5jimy4h)
 - Mapa do Google: Av. Senador Vergueiro, 3170 - Rudge Ramos - SBC
 - Cores tiradas da logo: roxo #9333EA e amarelo #F2ED5C
 - Botoes de WhatsApp sempre no verde oficial #25D366
