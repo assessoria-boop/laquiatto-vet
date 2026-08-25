@@ -9,6 +9,8 @@
   <link rel="icon" type="image/webp" href="logo.webp" />
   <link rel="apple-touch-icon" href="logo.webp" />
   <link rel="preload" as="image" href="logo.webp" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="bg-mobile.webp" media="(max-width: 900px)" fetchpriority="high" type="image/webp" />
+  <link rel="preload" as="image" href="bg-desktop.webp" media="(min-width: 901px)" fetchpriority="high" type="image/webp" />
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
   <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
@@ -167,23 +169,42 @@
     .hero {
       min-height: calc(100svh - 104px);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
       text-align: center;
-      padding: 48px 24px 44px;
+      padding: 0 0 44px;
       position: relative;
       overflow: hidden;
-      background: radial-gradient(circle at 50% 0%, var(--roxo-suave) 0%, #ffffff 62%);
+      background: var(--branco);
+    }
+
+    .hero-banner {
+      width: 100%;
+      line-height: 0;
+      overflow: hidden;
+      border-radius: 0 0 50% 50% / 0 0 14% 14%;
+      flex-shrink: 0;
+    }
+
+    .hero-banner img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
+      flex: 1;
       max-width: 660px;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      padding: 30px 24px 0;
     }
 
     .hero-logo {
@@ -263,29 +284,42 @@
     /* STATS */
     .stats {
       background: var(--gradiente);
-      padding: 28px 48px;
+      padding: 22px 0;
+      overflow: hidden;
     }
 
-    .stats-inner {
-      max-width: 900px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
+    .stats-track {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      animation: marquee 34s linear infinite;
     }
 
-    .stat {
-      text-align: center;
-      padding: 8px 16px;
-      border-right: 1px solid rgba(255,255,255,0.18);
+    .stats-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      text-align: center;
+      padding: 0 44px;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
-    .stat:last-child { border-right: none; }
-    .stat-num   { font-size: 26px; font-weight: 900; color: var(--amarelo); letter-spacing: -1px; }
+
+    .stats-divider {
+      width: 1px;
+      height: 36px;
+      background: rgba(255,255,255,0.30);
+      flex-shrink: 0;
+    }
+
+    .stat-num   { font-size: 24px; font-weight: 900; color: var(--amarelo); letter-spacing: -0.8px; line-height: 1.15; }
     .stat-label { font-size: 12px; color: rgba(255,255,255,0.82); margin-top: 4px; font-weight: 500; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
 
     /* DEPOIMENTOS */
     .sec-depoi {
@@ -624,31 +658,31 @@
 
     /* RESPONSIVO */
     @media (max-width: 900px) {
-      nav { padding: 12px 20px; }
-      nav .nav-nome, nav .nav-badge { display: none; }
+      nav { display: none; }
 
-      .hero { min-height: calc(100svh - 96px); padding: 36px 14px 36px; }
+      .hero { min-height: calc(100svh - 36px); padding: 0 0 36px; }
       /* headline fluida: cresce junto com a largura do aparelho sem nunca estourar */
-      .hero h1 { font-size: clamp(28px, 9.6vw, 40px); letter-spacing: -1.5px; margin-bottom: 16px; }
+      .hero h1 { font-size: clamp(30px, 10vw, 44px); letter-spacing: -2px; margin-bottom: 16px; }
       .hero-rating { font-size: 16px; margin-bottom: 30px; }
       .br-mob { display: inline; }
       .br-desk { display: none; }
-      .hero-logo { width: 120px; height: 120px; margin-bottom: 28px; }
+      .hero-logo { display: none; }
+      .hero-banner { border-radius: 0 0 50% 50% / 0 0 10% 10%; }
+      .hero-banner img { height: 195px; }
+      .hero-content { padding: 26px 14px 0; }
       .hero-btns { max-width: 100%; }
 
-      .stats { padding: 0 20px; }
-      .stats-inner { grid-template-columns: repeat(2, 1fr); }
-      .stat { padding: 20px 12px; border-right: 1px solid rgba(255,255,255,0.18); border-bottom: 1px solid rgba(255,255,255,0.18); }
-      .stat:nth-child(2) { border-right: none; }
-      .stat:nth-child(3) { grid-column: 1 / -1; border-right: none; border-bottom: none; }
+      .stats { padding: 18px 0; }
+      .stats-item { padding: 0 26px; }
       .stat-num { font-size: 20px; }
+      .stats-track { animation-duration: 24s; }
 
       .sec-depoi { padding: 56px 0; }
       .sec-depoi-inner { padding: 0 20px; text-align: center; }
       .carrossel-slide { padding: 0 16px; }
       .review-img-card { max-width: 100%; }
 
-      .depoi-titulo { font-size: 26px; }
+      .sec-titulo.depoi-titulo { font-size: 34px; }
       .depoi-imagens .carrossel-wrap { margin-top: 32px; }
 
       .sec { padding: 56px 20px; text-align: center; }
@@ -710,6 +744,12 @@
 
 <!-- HERO -->
 <div class="hero">
+  <div class="hero-banner">
+    <picture>
+      <source media="(min-width: 901px)" srcset="bg-desktop.webp" type="image/webp" />
+      <img src="bg-mobile.webp" alt="Laquiatto Veterinária, cuidado completo para o seu pet" fetchpriority="high" decoding="async" />
+    </picture>
+  </div>
   <div class="hero-content">
     <div class="hero-logo">
       <img src="logo.webp" alt="Laquiatto Veterinária" decoding="async" loading="eager" width="148" height="148" />
@@ -730,19 +770,40 @@
 
 <!-- STATS -->
 <div class="stats">
-  <div class="stats-inner">
-    <div class="stat">
-      <div class="stat-num">4,9 ★</div>
-      <div class="stat-label">Nota média no Google</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num">+150</div>
-      <div class="stat-label">Avaliações de tutores reais</div>
-    </div>
-    <div class="stat">
-      <div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div>
-      <div class="stat-label">em Rudge Ramos, SBC</div>
-    </div>
+  <div class="stats-track">
+    <div class="stats-item"><div class="stat-num">4,9</div><div class="stat-label">Nota média no Google</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">+150</div><div class="stat-label">Avaliações de tutores reais</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div><div class="stat-label">em São Bernardo do Campo</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Dermatologia</div><div class="stat-label">veterinário especialista</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">4,9</div><div class="stat-label">Nota média no Google</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">+150</div><div class="stat-label">Avaliações de tutores reais</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div><div class="stat-label">em São Bernardo do Campo</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Dermatologia</div><div class="stat-label">veterinário especialista</div></div>
+    <div class="stats-divider"></div>
+    <!-- copia para o loop continuo -->
+    <div class="stats-item"><div class="stat-num">4,9</div><div class="stat-label">Nota média no Google</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">+150</div><div class="stat-label">Avaliações de tutores reais</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div><div class="stat-label">em São Bernardo do Campo</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Dermatologia</div><div class="stat-label">veterinário especialista</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">4,9</div><div class="stat-label">Nota média no Google</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num">+150</div><div class="stat-label">Avaliações de tutores reais</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Referência</div><div class="stat-label">em São Bernardo do Campo</div></div>
+    <div class="stats-divider"></div>
+    <div class="stats-item"><div class="stat-num" style="font-size:18px;letter-spacing:0;">Dermatologia</div><div class="stat-label">veterinário especialista</div></div>
+    <div class="stats-divider"></div>
   </div>
 </div>
 
@@ -795,7 +856,7 @@
 
     <div class="depoi-conteudo">
       <span class="sec-tag">Depoimentos reais</span>
-      <h2 class="sec-titulo depoi-titulo">Quem confia <span>na<br class="br-mob" /> Laquiatto recomenda</span></h2>
+      <h2 class="sec-titulo depoi-titulo">Quem confia<br class="br-mob" /> <span>na Laquiatto<br class="br-mob" /> recomenda</span></h2>
     </div>
    </div>
   </div>
@@ -805,7 +866,7 @@
 <div class="sec">
   <span class="sec-tag">O que fazemos</span>
   <h2 class="sec-titulo">Do check-up de rotina ao tratamento completo, <span>seu pet tem para onde ir</span></h2>
-  <p class="sec-sub">Saúde de pet não espera a agenda ficar livre. Aquele apetite que sumiu, a vacina que venceu, o incômodo que ninguém explica: quando existe uma equipe de confiança pertinho de você, tudo fica mais simples. Na Laquiatto Veterinária, profissionais atenciosos e apaixonados cuidam do seu companheiro com competência, carinho e estrutura completa, em todas as fases da vida dele.</p>
+  <p class="sec-sub">Saúde de pet não espera a agenda ficar livre.</p>
   <div class="servicos-grid">
     <div class="servico-card">
       <div class="servico-icone">
