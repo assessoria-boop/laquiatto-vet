@@ -173,7 +173,7 @@
     .hx-stat span { font-size: 12px; line-height: 15px; color: #FFFFFFD9; }
     .hx-texto { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: flex-start; }
     .hx-h1 span { display: block; }
-    .hx-h1 span:first-child { color: var(--c-ink); font-weight: 700; }
+    .hx-h1 span:first-child { color: var(--c-amarelo); font-weight: 700; }
     .hx-h1 { font-size: 28px; font-weight: 500; letter-spacing: -0.03em; line-height: 34px; color: #fff; }
     .hx-sub { margin-top: 14px; font-size: 14px; line-height: 22px; color: #FFFFFFD9; }
     .hero-cta { white-space: nowrap; align-self: stretch; height: 54px; gap: 10px; margin-top: 22px; padding: 0 24px; box-shadow: 0 10px 26px #25D36659; }
@@ -301,6 +301,8 @@
     .sec-etapas { padding-top: 88px; gap: 26px; }
     .car-cab { display: flex; flex-direction: column; gap: 12px; margin: 0 var(--pl); }
     .car-tag { font-size: 16px; line-height: 20px; color: var(--c-brand); }
+    /* rótulos das dobras (avaliações, etapas, contato) em maiúsculas */
+    .car-tag, .cta-tag { text-transform: uppercase; letter-spacing: .06em; }
     .car-dir { display: flex; flex-direction: column; gap: 12px; }
     .car-h2 { display: flex; font-size: 30px; font-weight: 500; letter-spacing: -0.03em; line-height: 36px; color: var(--c-ink); }
     .car-h2 .c { color: var(--c-brand); }
@@ -649,6 +651,9 @@
 
     @media (max-width: 1023px) {
       .only-d { display: none !important; }
+      /* hero no celular: título e texto centralizados, título maior */
+      .hx-texto { align-items: center; text-align: center; }
+      .hx-h1 { font-size: clamp(28px, 9.4vw, 38px); line-height: 1.15; }
     }
 
     /* ════════════════ DESKTOP (prancheta 1440) ════════════════ */
@@ -831,10 +836,10 @@
       </picture>
     </div>
     <div class="hx-painel">
-      <div class="hx-stat"><b>+150</b><span>avaliações de tutores<br />reais no Google</span></div>
+      <div class="hx-stat only-d"><b>+150</b><span>avaliações de tutores<br />reais no Google</span></div>
       <div class="hx-texto">
         <h1 class="hx-h1"><span>Clínica Veterinária</span> <span>em São Bernardo</span></h1>
-        <p class="hx-sub">Laquiatto Veterinária, em Rudge Ramos, São Bernardo do Campo. Cuidado completo para a saúde do seu melhor amigo!</p>
+        <p class="hx-sub">Cuidado completo para a saúde do seu melhor amigo!</p>
         <a class="btn-wpp hero-cta" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp><span class="lbl">ATENDIMENTO IMEDIATO</span><svg class="i-wpp"><use href="#i-wpp"/></svg></a>
       </div>
     </div>
