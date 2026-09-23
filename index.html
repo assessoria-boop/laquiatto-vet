@@ -592,27 +592,21 @@
     .cta-conteudo { display: flex; flex-direction: column; gap: 14px; }
     .cta-h2 { display: flex; flex-direction: column; font-size: 26px; font-weight: 500; letter-spacing: -0.02em; line-height: 32px; color: #fff; }
     .cta-p { font-size: 14px; line-height: 22px; color: #FFFFFFE0; }
-    .cta-form {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 8px;
-      padding: 8px;
+    /* botao unico, branco, alinhado com o texto (pedido do cliente em 23/09/2026) */
+    .cta-btn {
+      align-self: flex-start;
+      height: 54px;
+      gap: 10px;
+      margin-top: 4px;
+      padding: 0 26px;
       background: #fff;
-      border-radius: 24px;
-      box-shadow: 0 14px 34px #2A0E451F;
+      color: var(--c-brand);
+      box-shadow: 0 10px 26px rgba(0,0,0,.22);
     }
-    .cta-campo {
-      display: flex; align-items: center;
-      height: 50px;
-      padding: 0 22px;
-      background: var(--c-pill); border-radius: 999px;
-      font-size: 13px; line-height: 16px; color: var(--c-body);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-      transition: background .3s;
-    }
-    .cta-campo:hover { background: #EFE4FD; }
-    .cta-btn { height: 54px; gap: 8px; }
+    .cta-btn .lbl { text-transform: uppercase; }
+    .cta-btn svg { color: var(--wpp); }
+    .cta-btn::after { display: none; }
+    .cta-btn:hover { filter: none; box-shadow: 0 14px 32px rgba(0,0,0,.28); transform: translateY(-2px); }
     .cta-btn .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; }
     .cta-btn svg { width: 18px; height: 18px; }
 
@@ -753,9 +747,7 @@
       .cta-conteudo { gap: 18px; padding-right: 40px; }
       .cta-h2 { font-size: clamp(26px, 2.36vw, 34px); letter-spacing: -0.015em; line-height: 1.235; }
       .cta-p { width: 430px; max-width: 100%; }
-      .cta-form { position: absolute; left: 70px; right: 70px; bottom: 36px; flex-direction: row; margin: 0; border-radius: 999px; }
-      .cta-campo { flex: 1 1 0; min-width: 0; height: 56px; padding: 0 26px; }
-      .cta-btn { flex: 0 1 420px; height: 56px; gap: 10px; }
+      .cta-btn { height: 56px; margin-top: 6px; padding: 0 34px; }
       .cta-btn .lbl { letter-spacing: 0.18em; }
       .cta-btn svg { width: 20px; height: 20px; }
 
@@ -774,6 +766,16 @@
       .js .rv:not(.vis) { opacity: 1; }
       .rv.vis, .serv-pill, .wpp-float::before { animation: none; }
       .btn-wpp::after { display: none; }
+    }
+
+    /* card de contato centralizado no celular (pedido do cliente em 23/09/2026) */
+    @media (max-width: 1023px) {
+      .cta-card { text-align: center; }
+      .cta-tag { align-self: center; }
+      .cta-conteudo { align-items: center; }
+      .cta-h2 { align-items: center; }
+      .cta-p { margin-left: auto; margin-right: auto; }
+      .cta-btn { align-self: center; }
     }
   </style>
 </head>
@@ -1051,10 +1053,6 @@
     <div class="cta-conteudo">
       <h2 class="cta-h2"><span>A saúde do seu pet <br class="only-m" />não espera.</span><span>E nós também não.</span></h2>
       <p class="cta-p">Consulta de rotina, vacina atrasada ou aquele sinal que preocupa: fale agora e venha com tranquilidade.</p>
-    </div>
-    <div class="cta-form">
-      <a class="cta-campo" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Entre em contato pelo WhatsApp</a>
-      <a class="cta-campo" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Atendimento disponível agora</a>
       <a class="btn-wpp cta-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
         <span class="lbl">ATENDIMENTO IMEDIATO</span>
         <svg class="i-wpp"><use href="#i-wpp"/></svg>
