@@ -457,7 +457,7 @@
     .serv-lista { display: flex; flex-direction: column; width: calc(100% - 32px); border-top: 2px solid var(--c-line); }
     .sr {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: 1fr;
       column-gap: 12px;
       align-items: center;
       padding: 22px 0;
@@ -483,17 +483,8 @@
     .sr-ic svg { width: 16px; height: 16px; }
     .sr-nome { font-size: 30px; font-weight: 500; letter-spacing: -0.045em; line-height: 36px; color: var(--c-ink); transition: color .35s var(--ease); }
     .sr-desc { grid-column: 2; font-size: 13px; line-height: 20px; color: var(--c-body); }
-    .sr-btn {
-      width: 92px; height: 38px;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      background: var(--c-readmore); border-radius: 999px;
-      font-size: 12px; font-weight: 600; line-height: 14px; color: var(--c-brand);
-      transition: background .3s, color .3s, box-shadow .3s;
-    }
-    /* estado aberto = a linha em destaque da prancheta (nome na cor da marca e botao escuro) */
+    /* estado aberto = a linha em destaque da prancheta (nome na cor da marca) */
     .sr.aberto .sr-nome { color: var(--c-brand); }
-    .sr.aberto .sr-btn { background: var(--c-brand); color: #fff; box-shadow: 0 8px 20px #7E22CE40; }
 
     /* ── CARDS CAES E GATOS ── */
     .sec-pets { display: flex; flex-direction: column; gap: 14px; padding: 12px 16px 0; background: #fff; }
@@ -708,7 +699,6 @@
       .serv-lista { width: 878px; max-width: calc(100% - 64px); }
       .sr { display: flex; align-items: center; height: 147px; padding: 0; }
       .sr-info { margin-right: auto; }
-      .sr-btn { margin-left: 24px; }
       /* no desktop a foto abre na lateral e o texto desliza para a direita */
       .sr-midia { width: 0; height: 133px; flex-shrink: 0; transition: width .55s var(--ease), margin .55s var(--ease), outline-color .3s; }
       .sr-midia img { width: 188px; height: 133px; }
@@ -717,7 +707,6 @@
       .sr-ic { grid-row: 1 / span 2; align-self: start; padding-top: 10px; }
       .sr-nome { font-size: 48px; line-height: 52px; }
       .sr-desc { font-size: 11px; line-height: 14px; }
-      .sr-btn { width: 110px; height: 44px; font-size: 10px; line-height: 12px; }
 
       /* cards caes e gatos */
       .sec-pets { flex-direction: row; gap: 16px; padding: 12px 15px 0; }
@@ -759,7 +748,7 @@
     @media (min-width: 1024px) and (max-width: 1279px) {
       .pc-h3 { font-size: 26px; line-height: 36px; }
     }
-    .pc-mais, .sr-btn { white-space: nowrap; }
+    
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -776,6 +765,77 @@
       .cta-h2 { align-items: center; }
       .cta-p { margin-left: auto; margin-right: auto; }
       .cta-btn { align-self: center; }
+    }
+
+    /* dobra "o que fazemos" oculta (pedido do cliente em 24/09/2026); para voltar, apague estas duas linhas */
+    .sec-fz { display: none; }
+
+    /* botoes na cor da marca no fim das dobras de depoimentos e servicos (pedido do cliente em 24/09/2026) */
+    .cta-linha { display: flex; justify-content: center; padding: 0 16px; }
+    .sec-serv .cta-linha { margin-top: 36px; }
+    .btn-marca {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      height: 54px; padding: 0 28px;
+      background: var(--c-brand); color: #fff;
+      border-radius: 999px;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.14em; line-height: 14px; text-transform: uppercase; text-align: center;
+      box-shadow: 0 10px 26px rgba(0,0,0,.18);
+      transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
+    }
+    .btn-marca svg { width: 18px; height: 18px; flex-shrink: 0; fill: currentColor; }
+    .btn-marca:hover { transform: translateY(-2px); box-shadow: 0 16px 34px rgba(0,0,0,.26); filter: brightness(1.08); }
+    @media (min-width: 1024px) {
+      .sec-serv .cta-linha { margin-top: 48px; }
+      .btn-marca { height: 56px; padding: 0 36px; font-size: 12px; letter-spacing: 0.18em; }
+      .btn-marca svg { width: 20px; height: 20px; }
+    }
+
+    /* respiro depois do botao dos depoimentos, igual ao do fim da dobra de servicos (pedido do cliente em 24/09/2026) */
+    .sec-aval .cta-linha { margin-bottom: 64px; }
+    @media (min-width: 1024px) { .sec-aval .cta-linha { margin-bottom: 111px; } }
+
+    /* texto das avaliacoes centralizado no mobile (pedido do cliente em 24/09/2026) */
+    @media (max-width: 1023px) {
+      .sec-aval .car-cab { align-items: center; text-align: center; }
+      .sec-aval .car-dir { align-items: center; }
+      .sec-aval .car-h2 { justify-content: center; flex-wrap: wrap; }
+    }
+
+    /* cards de caes e gatos: foto redonda sobre a palavra gigante (pedido do cliente em 24/09/2026) */
+    .sec-pets { display: flex; flex-direction: column; align-items: center; gap: 36px; padding: 36px 16px 8px; background: #fff; }
+    .pc {
+      position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px;
+      width: 100%; max-width: 420px; height: auto; padding: 0; text-align: center;
+      background: none; border: 0; border-radius: 0; box-shadow: none; overflow: visible;
+      transition: transform .35s var(--ease);
+    }
+    .pc-topo { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; height: 220px; }
+    .pc .pc-gigante {
+      position: absolute; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%);
+      width: max-content; font-size: 130px; font-weight: 400; letter-spacing: -0.075em; line-height: 1;
+      background: linear-gradient(180deg, var(--c-logo) 18%, transparent 90%);
+      -webkit-background-clip: text; background-clip: text; color: transparent; pointer-events: none;
+    }
+    .pc--gatos .pc-gigante { background: linear-gradient(180deg, var(--c-light) 18%, transparent 90%); -webkit-background-clip: text; background-clip: text; }
+    .pc-foto {
+      position: relative; z-index: 1; width: 220px; height: 220px; flex-shrink: 0;
+      border-radius: 50%; overflow: hidden; border: 8px solid #fff; background: #fff;
+      box-shadow: 0 16px 34px rgba(0,0,0,.16);
+    }
+    .pc-foto > .pc-img { position: static; inset: auto; width: 100%; height: 100%; object-fit: cover; border-radius: 0; transition: transform .8s var(--ease); }
+    .pc .pc-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; background: #fff; border: 1px solid var(--c-border); border-radius: 999px; font-size: 11px; font-weight: 500; line-height: 13px; color: var(--c-brand); }
+    .pc .pc-tag svg { width: 11px; height: 11px; color: var(--c-brand); }
+    .pc .pc-h3 { display: flex; flex-direction: column; font-size: 22px; font-weight: 500; letter-spacing: -0.03em; line-height: 28px; color: var(--c-ink); }
+    .pc:hover { transform: translateY(-4px); box-shadow: none; }
+    .pc:hover .pc-foto > .pc-img { transform: scale(1.06); }
+    @media (min-width: 1024px) {
+      .sec-pets { flex-direction: row; align-items: flex-start; gap: 24px; padding: 56px 15px 24px; }
+      .pc { flex: 1 1 0; max-width: none; gap: 18px; }
+      .pc-topo { height: 320px; }
+      .pc .pc-gigante { font-size: 280px; }
+      .pc-foto { width: 320px; height: 320px; border-width: 10px; }
+      .pc .pc-tag { font-size: 12px; line-height: 14px; }
+      .pc .pc-h3 { font-size: 32px; letter-spacing: -0.035em; line-height: 40px; }
     }
   </style>
 </head>
@@ -886,6 +946,12 @@
     <div class="av rv" style="--d:.32s"><img src="img/avaliacao-5.webp" width="501" height="635" alt="Avaliação real de tutor no Google" loading="lazy" decoding="async" /></div>
   </div>
   <div class="car-prog"><span></span></div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Falar com Veterinário Agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
+  </div>
 </section>
 
 <!-- O QUE FAZEMOS -->
@@ -946,7 +1012,6 @@
         <span class="sr-nome">Consultas</span>
         <span class="sr-desc">Diagnóstico cuidadoso e orientação clara para o tratamento certo.</span>
       </div>
-      <a class="sr-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
     </div>
     <div class="sr rv aberto padrao">
       <span class="sr-midia"><img style="object-position:50% 42%" src="img/card-caes.webp" width="1000" height="1000" alt="Cachorro de pelagem preta e caramelo" loading="lazy" decoding="async" /></span>
@@ -955,7 +1020,6 @@
         <span class="sr-nome">Vacinação</span>
         <span class="sr-desc">Proteção contra doenças em cada fase da vida do seu pet.</span>
       </div>
-      <a class="sr-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
     </div>
     <div class="sr rv">
       <span class="sr-midia"><img class="foco-baixo" src="img/destaque-consultas.webp" width="760" height="950" alt="Exame de ultrassom em um gato" loading="lazy" decoding="async" /></span>
@@ -964,7 +1028,6 @@
         <span class="sr-nome">Exames</span>
         <span class="sr-desc">Resultados analisados com atenção para agir rápido e com segurança.</span>
       </div>
-      <a class="sr-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
     </div>
     <div class="sr rv">
       <span class="sr-midia"><img src="img/destaque-cirurgia.webp" width="760" height="950" alt="Veterinária realizando cirurgia" loading="lazy" decoding="async" /></span>
@@ -973,7 +1036,6 @@
         <span class="sr-nome">Cirurgias</span>
         <span class="sr-desc">Procedimentos realizados por uma equipe experiente e dedicada.</span>
       </div>
-      <a class="sr-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
     </div>
     <div class="sr rv">
       <span class="sr-midia"><img style="object-position:50% 50%" src="img/servicos-dermatologia.webp" width="800" height="533" alt="Veterinário examinando a pele de um cão" loading="lazy" decoding="async" /></span>
@@ -982,34 +1044,33 @@
         <span class="sr-nome">Dermatologia</span>
         <span class="sr-desc">Coceira, alergias, queda de pelo, otite e dermatites investigadas a fundo.</span>
       </div>
-      <a class="sr-btn" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais</a>
     </div>
+  </div>
+  <div class="cta-linha">
+    <a class="btn-marca" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>
+      <span class="lbl">Atendimento rápido agora</span>
+      <svg class="i-wpp"><use href="#i-wpp"/></svg>
+    </a>
   </div>
 </section>
 
 <!-- CARDS CAES E GATOS -->
 <section class="sec-pets">
   <article class="pc pc--caes rv">
-    <img class="pc-img" src="img/card-caes.webp" width="1000" height="1000" alt="Cachorro de pelagem preta e caramelo" loading="lazy" decoding="async" />
-    <span class="pc-gigante" aria-hidden="true">cães</span>
-    <div class="pc-vidro">
-      <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Check-up e acompanhamento</span>
-      <div class="pc-baixo">
-        <h3 class="pc-h3"><span>Do filhote ao idoso,</span><span>um olhar próximo</span></h3>
-        <a class="pc-mais" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais <svg class="i"><use href="#i-seta"/></svg></a>
-      </div>
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">cães</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-caes.webp" width="1000" height="1000" alt="Cachorro de pelagem preta e caramelo" loading="lazy" decoding="async" /></div>
     </div>
+    <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Check-up e acompanhamento</span>
+    <h3 class="pc-h3"><span>Do filhote ao idoso,</span><span>um olhar próximo</span></h3>
   </article>
   <article class="pc pc--gatos rv" style="--d:.12s">
-    <img class="pc-img" src="img/card-gatos.webp" width="900" height="1350" alt="Gato de pelagem cinza" loading="lazy" decoding="async" />
-    <span class="pc-gigante" aria-hidden="true">gatos</span>
-    <div class="pc-vidro">
-      <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Estrutura acolhedora</span>
-      <div class="pc-baixo">
-        <h3 class="pc-h3"><span>Um ambiente pensado</span><span>para o seu pet</span></h3>
-        <a class="pc-mais" href="https://wa.me/5511964523795?text=Ol%C3%A1%20encontrei%20voc%C3%AAs%20pelo%20Google%2C%20gostaria%20de%20atendimento." target="_blank" rel="noopener" data-wpp>Saiba mais <svg class="i"><use href="#i-seta"/></svg></a>
-      </div>
+    <div class="pc-topo">
+      <span class="pc-gigante" aria-hidden="true">gatos</span>
+      <div class="pc-foto"><img class="pc-img" src="img/card-gatos.webp" width="900" height="1350" alt="Gato de pelagem cinza" loading="lazy" decoding="async" /></div>
     </div>
+    <span class="pc-tag"><svg class="i"><use href="#i-tag"/></svg>Estrutura acolhedora</span>
+    <h3 class="pc-h3"><span>Um ambiente pensado</span><span>para o seu pet</span></h3>
   </article>
 </section>
 
@@ -1274,7 +1335,7 @@
     linhas.forEach(function (sr) {
       sr.addEventListener('mouseenter', function () { if (comMouse.matches) abre(sr); });
       sr.addEventListener('click', function (e) {
-        if (comMouse.matches || e.target.closest('.sr-btn')) return;
+        if (comMouse.matches) return;
         abre(sr.classList.contains('aberto') ? null : sr);
       });
     });
