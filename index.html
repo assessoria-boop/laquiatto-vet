@@ -625,8 +625,6 @@
     .wpp-float svg { width: 30px; height: 30px; }
     .wpp-float.btn-wpp { overflow: visible; transition: opacity .35s var(--ease), transform .45s var(--ease); }
     .wpp-float.btn-wpp::after { display: none; }
-    /* so aparece depois que o botao verde do hero sai da tela */
-    .js .wpp-float:not(.visivel) { opacity: 0; transform: scale(.6) translateY(16px); pointer-events: none; }
 
     /* ── TABLET: mantem o layout mobile, com largura contida ── */
     @media (min-width: 600px) and (max-width: 1023px) {
@@ -1371,16 +1369,6 @@
     io.observe(f);
   })();
 
-  /* Botao flutuante: aparece quando o botao verde do hero sai da tela */
-  (function () {
-    var flutua = document.querySelector('.wpp-float');
-    var cta = document.querySelector('.hero-cta');
-    if (!flutua || !cta) return;
-    if (!('IntersectionObserver' in window)) { flutua.classList.add('visivel'); return; }
-    new IntersectionObserver(function (es) {
-      flutua.classList.toggle('visivel', !es[0].isIntersecting);
-    }).observe(cta);
-  })();
 
   /* Menu mobile */
   (function () {
